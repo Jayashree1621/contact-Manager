@@ -1,0 +1,23 @@
+
+
+      <!-- Edit -->
+  <main>
+    <h2>Edit Contact</h2>
+
+    <form method="POST" action="/edit-contact/{{contact._id}}?_method=PUT">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="cname" value="{{contact.cname}}">
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{contact.email}}">
+      </p>
+      <p>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="{{contact.phone}}">
+      </p>
+
+      <button type="submit">Update</button>
+    </form>
+  </main>
