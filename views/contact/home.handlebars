@@ -1,0 +1,25 @@
+<h2>Contact List</h2>
+<table border="3" cellpadding="5">
+  <tr>
+    <th>Name</th><th>Email</th><th>Phone</th><th>Actions</th>
+  </tr>
+  {{#each contacts}}
+    <tr>
+      <td>{{this.cname}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td>
+        <a href="/edit-contact/{{this._id}}" class="btn-edit">Edit</a>
+        |
+        <form action="/delete-contact/{{this._id}}?_method=DELETE" 
+        method="POST" 
+        style="display:inline;" 
+        >
+          <button type="submit" class="delete-reset">Delete</button>
+
+        </form>
+
+      </td>
+    </tr>
+  {{/each}}
+</table>
